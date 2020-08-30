@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <form action="" method="post">
+            {{ post.hidden_tag() }}
+            <div class="container">
+                    <p>
+                        {{ post.title.label }}
+                    </p>
+                   
+                    <p>
+                        {{ post.title(size = 30 ) }}
+                    </p>
+
+                    <p>
+                        {{post.author.label }}
+                    </p>
+
+                    <p>
+                        {{post.author(size= 30)}}
+                    </p>
+
+                    <p>
+                        {{ post.message.label }}
+                    </p>
+                
+                    <p>
+                        {{ post.message(cols="120", rows ="10") }}
+                    </p>
+
+                    <p> {{ post.submit() }} </p>
+                    
+            </div>
+    </form>
+{% endblock content %}
