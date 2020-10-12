@@ -24,7 +24,7 @@ class Post(db.Model):
 
 @app.route('/home')
 def index():
-    blogposts = Post.query.all()
+    blogposts = Post.query.all() # fetch records table
     return render_template('home.html', blogposts = blogposts)
 
 

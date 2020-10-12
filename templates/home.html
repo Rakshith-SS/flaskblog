@@ -2,17 +2,19 @@
 
 {% block content %}
     {% for item in blogposts %}
-    <legend>
-            <p>
-                {{ item.title }}   {{ item.date_posted.strftime('%Y-%m-%d') }}
-            </p> 
-            <p> 
-                {{item.author}}
-            </p>
-            <p> 
-                {{item.content}}
-            </p>
-    </legend>
+    <fieldset>
+        <legend>
+                <p>
+                    {{ item.title }}   {{ item.date_posted.strftime('%Y-%m-%d') }}
+                </p> 
+                <p> 
+                    {{item.author}}
+                </p>
+                <p> 
+                    {{item.content}}
+                </p>
+        </legend>
+    </fieldset>
         
     {% endfor %} 
 
